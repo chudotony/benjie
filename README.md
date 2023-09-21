@@ -3,7 +3,7 @@
 Benjamin declared that technological progress makes art easily reproducible and decreases its Exhibition Value. This project contradicts this take by:
 
 - Guarantee of uniqueness for each art piece. The program connects quickly generated graphics with users’ fingerprints. They are transformed into unique tokens that can be provided only by a particular person. The program showcases the image again only when the person provides the fingerprint.
-- The piece of art is exhibited only temporarily when a user gives their contest by providing a fingerprint. The initial project is exhibited in Moscow MoMA.
+- The piece of art is exhibited only temporarily when a user gives their contest by providing a fingerprint. The initial project was showcased at the exhibition "Forms of Dialogue" in Moscow MoMA from 17th September to 15th October 2023.
 
 # Usage
 
@@ -27,9 +27,9 @@ You can display your own images. Name them with numbers beginning from `1.png` a
 
 ## GUI
 
-The interface is built as a Windows form based on [ZKTeco SDK](https://zkteco.eu/downloads/zkfinger-sdk-v100-zk9500-usb-reader). If the fingerprint cannot be identified on capture, the interface requires to put the finger 3 more times for registration and then shows the associated generative image in the left part of the screen. If the finger is identified, the image is demonstrated immediately. The two recent images are shown in the middle and right parts of the screen.
+The interface is built as a Windows form based on [ZKTeco SDK](https://zkteco.eu/downloads/zkfinger-sdk-v100-zk9500-usb-reader). It is required to place the finger on the scanner to start visual capture. If the fingerprint cannot be identified on capture, the interface requires to put the finger 3 more times for registration and then shows the associated generative image in the left part of the screen. If the finger is identified, the image is demonstrated immediately. The two recent images are shown in the middle and right parts of the screen.
 
-![image_2023-08-31_17-15-59.png](Readme_pics/image_2023-08-31_17-15-59.png)
+![image_2023-08-31_17-15-59.png](Readme_pics/MMOMA_Forms_of_dialogue.jpg)
 
 ## Image generation
 

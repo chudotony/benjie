@@ -30,10 +30,6 @@ namespace Biokey01
 
         private void btnInitialSensor_Click(object sender, EventArgs e)        
         {
-            /*if (chkFakeFunOn.Checked)
-                axZKFPEngX1.FakeFunOn = 1;
-            else
-                axZKFPEngX1.FakeFunOn = 0;*/
             if (axZKFPEngX1.InitEngine() == 0)
             {
                 EnableButton(false);
@@ -48,15 +44,12 @@ namespace Biokey01
                     
                 fpcHandle = axZKFPEngX1.CreateFPCacheDBEx();
 
-                //txtb1.Text = axZKFPEngX1.SensorCount.ToString();
-                //txtb2.Text = axZKFPEngX1.SensorIndex.ToString();
-                //txtb5.Text = axZKFPEngX1.SensorSN;
-                statusBar1.Panels[0].Text = "Sensor Connected!";         
+                //statusBar1.Panels[0].Text = "Sensor Connected!";         
             }
             else
             {
                 axZKFPEngX1.EndEngine();
-                statusBar1.Panels[0].Text = "Error: Scanner not connected, try to reconnect";
+                //statusBar1.Panels[0].Text = "Error: Scanner not connected, try to reconnect";
             }
 
             FMatchType = 2;
@@ -70,7 +63,7 @@ namespace Biokey01
             }
             axZKFPEngX1.EnrollCount = 3; //finger press times
             axZKFPEngX1.BeginEnroll();
-            statusBar1.Panels[0].Text = "start register";
+            //statusBar1.Panels[0].Text = "start register";
         }
 
         private void btnCloseSensor_Click(object sender, EventArgs e) //close sensor button
@@ -92,7 +85,7 @@ namespace Biokey01
         {
             if (axZKFPEngX1.IsRegister)
                 axZKFPEngX1.CancelEnroll();
-            statusBar1.Panels[0].Text = "Verify(1:1)";
+            //statusBar1.Panels[0].Text = "Verify(1:1)";
             FMatchType = 1;
         }
 
@@ -136,7 +129,6 @@ namespace Biokey01
                     axZKFPEngX1.SaveTemplate("fingerprint.tpl", pTemplate);
 
                     FPID++;
-                    //MessageBox.Show("Register Succeed", "Information!");
                 }
                 else
                 {
@@ -158,11 +150,11 @@ namespace Biokey01
                     sVerTemplate = sRegTemplate10;
                 if (axZKFPEngX1.VerFingerFromStr(ref sVerTemplate, sTemp, false, ref RegChanged))
                 {
-                    statusBar1.Panels[0].Text = "Verify Succeed";
+                    //statusBar1.Panels[0].Text = "Verify Succeed";
                 }
                 else
                 {
-                    statusBar1.Panels[0].Text = "Verify Failed";
+                    //statusBar1.Panels[0].Text = "Verify Failed";
                 }
             }
             else if (FMatchType == 2)
@@ -172,47 +164,40 @@ namespace Biokey01
                 int ID = axZKFPEngX1.IdentificationInFPCacheDB(fpcHandle, e.aTemplate, ref score, ref processedNum);
                 if (ID == -1)
                 {
-                    statusBar1.Panels[0].Text = "Identify Failed";
+                    //statusBar1.Panels[0].Text = "Identify Failed";
                     axZKFPEngX1.EnrollCount = 3; //finger press times
-                    label2.Text = "Неизвестный отпечаток\nПриложите палец снова";
+                    label2.Text = "Неизвестный отпечаток, необходима регистрация\nПриложите палец ещё 4 раз(а)";
                     axZKFPEngX1.BeginEnroll();
-                    statusBar1.Panels[0].Text = "start register";
+                    //statusBar1.Panels[0].Text = "start register";
                 }
                 else
                 {
                     picID.Insert(0, ID);
 
-                    label1.Text = $"Отпечаток {picID[0]}";
-                    label2.Text = "Графический объект создан";
+                    label1.Text = $"Произведение {picID[0]}";
+                    label2.Text = "Графический объект создан\nДля нового произведения приложите палец";
                     pictureBox2.ImageLocation = $"{System.AppDomain.CurrentDomain.BaseDirectory}\\start_pics\\{picID[0]}.png";
 
                     if (picID.Count == 2)
                     {
-                        label3.Text = $"Отпечаток {picID[1]}";
+                        label3.Text = $"Произведение {picID[1]}";
                         pictureBox3.ImageLocation = $"{System.AppDomain.CurrentDomain.BaseDirectory}\\start_pics\\{picID[1]}.png";
                     }
 
                     if (picID.Count > 2)
                     {
-                        label3.Text = $"Отпечаток {picID[1]}";
-                        label4.Text = $"Отпечаток {picID[2]}";
+                        label3.Text = $"Произведение {picID[1]}";
+                        label4.Text = $"Произведение {picID[2]}";
                         pictureBox3.ImageLocation = $"{System.AppDomain.CurrentDomain.BaseDirectory}\\start_pics\\{picID[1]}.png";
                         pictureBox4.ImageLocation = $"{System.AppDomain.CurrentDomain.BaseDirectory}\\start_pics\\{picID[2]}.png";
                     }
 
-                    statusBar1.Panels[0].Text = string.Format("Identify Succeed ID = {0} Score = {1}  Processed Number = {2}", ID, score, processedNum);
+                    //statusBar1.Panels[0].Text = string.Format("Identify Succeed ID = {0} Score = {1}  Processed Number = {2}", ID, score, processedNum);
                 }
             }
         }
 
        
-
-        /*private void axZKFPEngX1_OnImageReceived(object sender, AxZKFPEngXControl.IZKFPEngXEvents_OnImageReceivedEvent e)
-        {
-            Graphics g = pictureBox2.CreateGraphics();
-            int dc = g.GetHdc().ToInt32();
-            axZKFPEngX1.PrintImageAt(dc, 0, 0, axZKFPEngX1.ImageWidth, axZKFPEngX1.ImageHeight);
-        }*/
 
         private void axZKFPEngX1_OnFeatureInfo(object sender, AxZKFPEngXControl.IZKFPEngXEvents_OnFeatureInfoEvent e)
         {
@@ -228,7 +213,7 @@ namespace Biokey01
                 sTemp = sTemp + " not good, quality=" + lastq.ToString();
             else
                 sTemp = sTemp + " good, quality=" + lastq.ToString();
-            statusBar1.Panels[0].Text = sTemp;
+            //statusBar1.Panels[0].Text = sTemp;
             label2.Text = $"Идёт регистрация\nПриложите палец ещё {axZKFPEngX1.EnrollIndex} раз(а)";
         }
 
@@ -301,10 +286,8 @@ namespace Biokey01
             btnInitialSensor.Enabled = bEnable;
             btnCloseSensor.Enabled = !bEnable;
             btnbrowse.Enabled = !bEnable;
-            //btnReg.Enabled = !bEnable;
             btnVerify.Enabled = !bEnable;
             btnIdentify.Enabled = !bEnable;
-            //btnRegByImage.Enabled = !bEnable;
             btnIdentifyByImage.Enabled = !bEnable;
             btnRed.Enabled = !bEnable;
             btnGreen.Enabled = !bEnable;

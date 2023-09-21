@@ -4,7 +4,7 @@
   <description asmv2:publisher="demo" asmv2:product="demo" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true" />
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
-    <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
     <dependentAssembly dependencyType="install" codebase="demo.exe.manifest" size="4760">
@@ -14,7 +14,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>9VTR5GRjWnu+Nsy1W0Bi7eXG98ENDUO6MTQAomlgy9s=</dsig:DigestValue>
+        <dsig:DigestValue>LPXjxXQcUb+Nos5L1VV2qzdgQ+4G51GqmBWnfOHr/O0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

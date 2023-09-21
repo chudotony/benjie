@@ -34,16 +34,12 @@ namespace Biokey01
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            //this.txtb2 = new System.Windows.Forms.TextBox();
-            this.statusBar1 = new System.Windows.Forms.StatusBar();
+            /*this.statusBar1 = new System.Windows.Forms.StatusBar();
             this.statusbar0 = new System.Windows.Forms.StatusBarPanel();
             this.statusBarPanel1 = new System.Windows.Forms.StatusBarPanel();
             this.statusBarPanel2 = new System.Windows.Forms.StatusBarPanel();
-            this.statusBarPanel3 = new System.Windows.Forms.StatusBarPanel();
-            //this.chkFakeFunOn = new System.Windows.Forms.CheckBox();
+            this.statusBarPanel3 = new System.Windows.Forms.StatusBarPanel();*/
             this.btnCloseSensor = new System.Windows.Forms.Button();
-            //this.txtb5 = new System.Windows.Forms.TextBox();
-            //this.txtb1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -59,39 +55,26 @@ namespace Biokey01
             this.btnGreen = new System.Windows.Forms.Button();
             this.btnRed = new System.Windows.Forms.Button();
             this.btnIdentifyByImage = new System.Windows.Forms.Button();
-            //this.btnRegByImage = new System.Windows.Forms.Button();
             this.btnVerify = new System.Windows.Forms.Button();
-            //this.btnReg = new System.Windows.Forms.Button();
             this.axZKFPEngX1 = new AxZKFPEngXControl.AxZKFPEngX();
             this.rdb10 = new System.Windows.Forms.RadioButton();
             this.rdb9 = new System.Windows.Forms.RadioButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnIdentify = new System.Windows.Forms.Button();
-            //this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.statusbar0)).BeginInit();
+            /*((System.ComponentModel.ISupportInitialize)(this.statusbar0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel3)).BeginInit();
-            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel3)).BeginInit();*/
             ((System.ComponentModel.ISupportInitialize)(this.axZKFPEngX1)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            /*// txtb2
-            // 
-            this.txtb2.Location = new System.Drawing.Point(628, 8);
-            this.txtb2.Name = "txtb2";
-            this.txtb2.ReadOnly = true;
-            this.txtb2.Size = new System.Drawing.Size(68, 21);
-            this.txtb2.TabIndex = 3;
-            // */
             // statusBar1
-            // 
+            /* 
             this.statusBar1.Location = new System.Drawing.Point(0, 371);
             this.statusBar1.Font = new System.Drawing.Font("IBM Plex Mono", 10);
             this.statusBar1.Name = "statusBar1";
@@ -122,106 +105,48 @@ namespace Biokey01
             // statusBarPanel3
             // 
             this.statusBarPanel3.Name = "statusBarPanel3";
+            */
+            //
+            //hidden titlebar
+            //
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            //
+            //instruction
+            //
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Name = "label2";
+            this.label2.Text = "Для нового произведения приложите палец";
+            this.label2.Location = new System.Drawing.Point(15, 70);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("IBM Plex Mono", 18);
             // 
-            /*// chkFakeFunOn
-            // 
-            this.chkFakeFunOn.AutoSize = true;
-            this.chkFakeFunOn.Location = new System.Drawing.Point(569, 218);
-            this.chkFakeFunOn.Name = "chkFakeFunOn";
-            this.chkFakeFunOn.Size = new System.Drawing.Size(78, 16);
-            this.chkFakeFunOn.TabIndex = 10;
-            this.chkFakeFunOn.Text = "FakeFunOn";
-            this.chkFakeFunOn.UseVisualStyleBackColor = true;
-            // */
-            /*// btnCloseSensor
-            // 
-            this.btnCloseSensor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCloseSensor.Enabled = false;
-            this.btnCloseSensor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCloseSensor.Location = new System.Drawing.Point(569, 132);
-            this.btnCloseSensor.Name = "btnCloseSensor";
-            this.btnCloseSensor.Size = new System.Drawing.Size(118, 23);
-            this.btnCloseSensor.TabIndex = 9;
-            this.btnCloseSensor.Text = "Disonnect Sensor";
-            this.btnCloseSensor.UseVisualStyleBackColor = true;
-            this.btnCloseSensor.Click += new System.EventHandler(this.btnCloseSensor_Click);
-            // */
-            /*// txtb5
-            // 
-            this.txtb5.Location = new System.Drawing.Point(455, 49);
-            this.txtb5.Name = "txtb5";
-            this.txtb5.ReadOnly = true;
-            this.txtb5.Size = new System.Drawing.Size(241, 21);
-            this.txtb5.TabIndex = 8;
-            // */
-            /*// txtb1
-            // 
-            this.txtb1.Location = new System.Drawing.Point(450, 8);
-            this.txtb1.Name = "txtb1";
-            this.txtb1.ReadOnly = true;
-            this.txtb1.Size = new System.Drawing.Size(52, 21);
-            this.txtb1.TabIndex = 4;
-            // */
-            /*// label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(367, 52);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 12);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Serial Number";
-            //*/ 
-            /*// label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(569, 12);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 12);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Current";
-            // */
-            /*// label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(367, 12);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 12);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Sensor Count";
-            //*/
             //heading1.1
             //
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Name = "label1";
-            this.label1.Text = $"Отпечаток N";
-            this.label1.Location = new System.Drawing.Point(0, 80);
+            this.label1.Text = $"Произведение N";
+            this.label1.Location = new System.Drawing.Point(5, 150);
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("IBM Plex Mono", 50);
+            this.label1.Font = new System.Drawing.Font("IBM Plex Mono", 42);
             //
-            //instruction
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Name = "label2";
-            this.label2.Text = "Приложите палец";
-            this.label2.Location = new System.Drawing.Point(15, 160);
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("IBM Plex Mono", 18);
             //heading1.2
             //
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.label3.Name = "label3";
-            this.label3.Text = $"Отпечаток N";
-            this.label3.Location = new System.Drawing.Point(650, 80);
+            this.label3.Text = $"Произведение N";
+            this.label3.Location = new System.Drawing.Point(655, 150);
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("IBM Plex Mono", 50);
+            this.label3.Font = new System.Drawing.Font("IBM Plex Mono", 42);
             //
             //heading1.3
             //
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.label4.Name = "label4";
-            this.label4.Text = $"Отпечаток N";
-            this.label4.Location = new System.Drawing.Point(1300, 80);
+            this.label4.Text = $"Произведение N";
+            this.label4.Location = new System.Drawing.Point(1305, 150);
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("IBM Plex Mono", 50);
+            this.label4.Font = new System.Drawing.Font("IBM Plex Mono", 42);
             //
             // btnInitialSensor
             // 
@@ -239,20 +164,7 @@ namespace Biokey01
             this.btnInitialSensor.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
             this.btnInitialSensor.Click += new System.EventHandler(this.btnInitialSensor_Click);
             //
-
-            /*// btnbrowse
-            // 
-            this.btnbrowse.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnbrowse.Location = new System.Drawing.Point(367, 172);
-            this.btnbrowse.Name = "btnbrowse";
-            this.btnbrowse.Size = new System.Drawing.Size(118, 21);
-            this.btnbrowse.TabIndex = 14;
-            this.btnbrowse.Text = "SaveImage";
-            this.btnbrowse.UseVisualStyleBackColor = true;
-            this.btnbrowse.Click += new System.EventHandler(this.btnbrowse_Click);
-            // */
-            
-            // radioButton2
+            // radioButton2 !
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(60, 14);
@@ -262,7 +174,7 @@ namespace Biokey01
             this.radioButton2.Text = "JPG";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // radioButton1 !
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Checked = true;
@@ -274,7 +186,7 @@ namespace Biokey01
             this.radioButton1.Text = "BMP";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // btnBeep
+            // btnBeep !
             // 
             this.btnBeep.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBeep.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -286,7 +198,7 @@ namespace Biokey01
             this.btnBeep.UseVisualStyleBackColor = true;
             this.btnBeep.Click += new System.EventHandler(this.btnBeep_Click);
             // 
-            // btnGreen
+            // btnGreen !
             // 
             this.btnGreen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGreen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -298,7 +210,7 @@ namespace Biokey01
             this.btnGreen.UseVisualStyleBackColor = true;
             this.btnGreen.Click += new System.EventHandler(this.btnGreen_Click);
             // 
-            // btnRed
+            // btnRed !
             // 
             this.btnRed.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRed.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -310,7 +222,7 @@ namespace Biokey01
             this.btnRed.UseVisualStyleBackColor = true;
             this.btnRed.Click += new System.EventHandler(this.btnRed_Click);
             // 
-            // btnIdentifyByImage
+            // btnIdentifyByImage !
             // 
             this.btnIdentifyByImage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIdentifyByImage.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -322,19 +234,7 @@ namespace Biokey01
             this.btnIdentifyByImage.UseVisualStyleBackColor = true;
             this.btnIdentifyByImage.Click += new System.EventHandler(this.btnIdentifyByImage_Click);
             // 
-            // btnRegByImage
-            /*// 
-            this.btnRegByImage.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegByImage.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRegByImage.Location = new System.Drawing.Point(367, 292);
-            this.btnRegByImage.Name = "btnRegByImage";
-            this.btnRegByImage.Size = new System.Drawing.Size(118, 23);
-            this.btnRegByImage.TabIndex = 10;
-            this.btnRegByImage.Text = "Register by image";
-            this.btnRegByImage.UseVisualStyleBackColor = true;
-            this.btnRegByImage.Click += new System.EventHandler(this.btnRegByImage_Click);
-            // */
-            // btnVerify
+            // btnVerify !
             // 
             this.btnVerify.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVerify.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -346,18 +246,6 @@ namespace Biokey01
             this.btnVerify.UseVisualStyleBackColor = true;
             this.btnVerify.Click += new System.EventHandler(this.btnVerify_Click);
             // 
-            // btnReg
-            /*// 
-            this.btnReg.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReg.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnReg.Location = new System.Drawing.Point(367, 212);
-            this.btnReg.Name = "btnReg";
-            this.btnReg.Size = new System.Drawing.Size(118, 23);
-            this.btnReg.TabIndex = 0;
-            this.btnReg.Text = "Register";
-            this.btnReg.UseVisualStyleBackColor = true;
-            this.btnReg.Click += new System.EventHandler(this.btnReg_Click);
-            // */
             // axZKFPEngX1
             // 
             this.axZKFPEngX1.Enabled = true;
@@ -367,7 +255,6 @@ namespace Biokey01
             this.axZKFPEngX1.Size = new System.Drawing.Size(24, 24);
             this.axZKFPEngX1.TabIndex = 3;
             this.axZKFPEngX1.OnFeatureInfo += new AxZKFPEngXControl.IZKFPEngXEvents_OnFeatureInfoEventHandler(this.axZKFPEngX1_OnFeatureInfo);
-            //this.axZKFPEngX1.OnImageReceived += new AxZKFPEngXControl.IZKFPEngXEvents_OnImageReceivedEventHandler(this.axZKFPEngX1_OnImageReceived);
             this.axZKFPEngX1.OnEnroll += new AxZKFPEngXControl.IZKFPEngXEvents_OnEnrollEventHandler(this.axZKFPEngX1_OnEnroll);
             this.axZKFPEngX1.OnCapture += new AxZKFPEngXControl.IZKFPEngXEvents_OnCaptureEventHandler(this.axZKFPEngX1_OnCapture);
             // 
@@ -397,7 +284,7 @@ namespace Biokey01
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // btnIdentify
+            // btnIdentify !
             // 
             this.btnIdentify.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIdentify.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -408,19 +295,10 @@ namespace Biokey01
             this.btnIdentify.Text = "Identify 1 : N";
             this.btnIdentify.UseVisualStyleBackColor = true;
             this.btnIdentify.Click += new System.EventHandler(this.btnIdentify_Click);
-            // 
-            // pictureBox1
-            /*// 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(274, 343);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-*/
+            //
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(20, 220);
+            this.pictureBox2.Location = new System.Drawing.Point(20, 250);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(512, 512);
             this.pictureBox2.TabIndex = 11;
@@ -428,15 +306,15 @@ namespace Biokey01
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(670, 220);
+            this.pictureBox3.Location = new System.Drawing.Point(670, 250);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(512, 512);
             this.pictureBox4.TabIndex = 11;
             this.pictureBox4.TabStop = false;
             //
-            // pictureBox3
+            // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(1320, 220);
+            this.pictureBox4.Location = new System.Drawing.Point(1320, 250);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(512, 512);
             this.pictureBox4.TabIndex = 11;
@@ -447,51 +325,25 @@ namespace Biokey01
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1300, 720);
-            //this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.axZKFPEngX1);
-            //this.Controls.Add(this.btnBeep);
-            //this.Controls.Add(this.btnIdentify);
-            //this.Controls.Add(this.btnGreen);
-            //this.Controls.Add(this.btnVerify);
-            //this.Controls.Add(this.btnRed);
-            //this.Controls.Add(this.chkFakeFunOn);
-            //this.Controls.Add(this.btnIdentifyByImage);
-            //this.Controls.Add(this.groupBox4);
-            //this.Controls.Add(this.btnRegByImage);
-            //this.Controls.Add(this.btnbrowse);
-            //this.Controls.Add(this.btnCloseSensor);
-            //this.Controls.Add(this.rdb10);
             this.Controls.Add(this.btnInitialSensor);
-            //this.Controls.Add(this.rdb9);
-            //this.Controls.Add(this.btnReg);
-            //this.Controls.Add(this.txtb5);
-            //this.Controls.Add(this.txtb1);
-            //this.Controls.Add(this.label6);
             this.Controls.Add(this.statusBar1);
-            //this.Controls.Add(this.label5);
-            //this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
-            //this.Controls.Add(this.txtb2);
-            //this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "\"Беньямин, ты был неправ!\"    Антонина Алексеева, Максим Господинко, Кристина Сулла.";
             this.Load += new System.EventHandler(this.Form1_Load);
-            //this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.statusbar0)).EndInit();
+            /*((System.ComponentModel.ISupportInitialize)(this.statusbar0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel3)).EndInit();
-            //this.groupBox4.ResumeLayout(false);
-            //this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel3)).EndInit();*/
             ((System.ComponentModel.ISupportInitialize)(this.axZKFPEngX1)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
